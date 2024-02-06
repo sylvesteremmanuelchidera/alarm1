@@ -1,3 +1,12 @@
+import tkinter as tk
+from tkinter import ttk
+from datetime import datetime, timedelta
+import time
+
+class DesktopApp:
+    def __init__(self, root):
+dsc
+
 def update_time(self):
         current_time = time.strftime('%H:%M:%S')
         self.time_label['text'] = current_time
