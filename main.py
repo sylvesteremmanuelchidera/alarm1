@@ -29,16 +29,6 @@ def update_time(self):
             else:
                 self.start_time += (datetime.now() - self.pause_time)
 
-   def toggle_stopwatch(self):
-        if self.running:
-            self.running = False
-        else:
-            self.running = True
-            if self.start_time is None:
-                self.start_time = datetime.now()
-            else:
-                self.start_time += (datetime.now() - self.pause_time)
-
     def reset_stopwatch(self):
         self.start_time = None
         self.running = False
