@@ -7,6 +7,7 @@
                self.alarm_active = False
          self.root.after(1000, self.check_alarm)
          
+         
 if __name__ == "__main__":
     root = tk.Tk()
     app = DesktopApp(root)
