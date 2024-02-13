@@ -3,7 +3,7 @@ def update_stopwatch(self):
        elapsed_time = datetime.now() - self.start_time
        stopwatch_time = str(elapsed_time).split(".")[0]
        self.stopwatch_label['text'] = stopwatch_time
-    self.groot.after(100, self.update_stopwatch)
+    self.root.after(100, self.update_stopwatch)
 
 def toggle_stopwatch(self):
         if self.running:
