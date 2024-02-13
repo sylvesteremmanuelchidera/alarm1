@@ -1,0 +1,40 @@
+class DesktopApp:
+    def __init__(self , root):
+        self.root = root
+        self.root.title("Time Management App")
+        self.root.geometry("400x300")
+        self.root.configure(bg='green') 
+
+    self.time_label = tk.Label(root, font=('times new roman', 60, 'bold'),background='blue', foreground='white')
+    self.time_label.pack(anchor='center', pady=20)
+
+    self.stopwatch_label = tk.Label(root, font=('times new roman', 60, 'bold'), background='blue', foreground='white')
+    self.stopwatch_label.pack(anchor='center', pady=10)
+
+    self.start_time = None
+    self.running = False
+    self.update_stopwatch()
+
+    self.start_button = ttk.Button(root, text="Start/Stop", command=self.toggle_stopwatch)
+    self.start-button.pack(side='left', padx=10)
+
+    self.start_button = ttk.Button(root, text="Reset", commqnd=self.reset_stopwatch)
+    self.start-button.pack(side='left', padx=10)
+  
+    self.alarm_entry = ttk.Entry(root, font=('times new roman', 12, 'bold'))
+    self.alarm_entry.pack(anchor='center', pady=10)
+
+    self.alarm_active = False
+    self.check_alarm()
+
+def update_time(self):
+    current_time = datetime.now().strftime('%H:%M:%S')
+    self.time_label['text'] = current_time
+    self.root.after(1000, self.update_time)
+
+def update_stopwatch(self):
+    if self.running:
+        elapsed_time = datetime.now() - self.start_time
+        stopwatch_time = str(elapsed_time).split(".")[0]
+        self.stopwatch_label['text'] = stopwawtch_time
+    self.groot.after(100, self.update_stopwatch)
